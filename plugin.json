@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "uuid": "perplexity-api-connector",
+    "iconURL": "",
+    "emoji": "🤖",
+    "title": "Perplexity API Connector",
+    "userSettings": {
+        "api_key": {
+            "type": "string",
+            "label": "API Key",
+            "required": true,
+            "placeholder": "Masukkan Perplexity API key Anda"
+        }
+    },
+    "openaiSpec": {
+        "name": "get_perplexity_response",
+        "description": "Mendapatkan respons dari Perplexity API",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "messages": {
+                    "type": "array",
+                    "description": "Array pesan chat"
+                },
+                "model": {
+                    "type": "string",
+                    "description": "Model AI yang digunakan"
+                },
+                "max_tokens": {
+                    "type": "integer",
+                    "description": "Jumlah maksimum token"
+                },
+                "temperature": {
+                    "type": "number",
+                    "description": "Tingkat kreativitas (0-2)"
+                }
+            },
+            "required": ["messages"]
+        }
+    },
+    "implementationType": "javascript",
+    "id": "perplexity-api-connector"
+}
